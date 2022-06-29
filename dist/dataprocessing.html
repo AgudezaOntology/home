@@ -83,8 +83,10 @@
 				<li>A function to tokenise the text into a list of separate strings</li>
 				<li>A function to create a dictionary of how many times each token appears</li>
 				<li>A function to remove certain stopwords from the previous dictionary. These were chosen after careful consideration of their singularity and importance within the context of the <i>Agudeza</i>:
+					<ul>
 					<li>Many stopwords represent common parts of speech which are negligible for nearly every computational analysis, regardless of context (for example: subject pronouns, definite and indefinite articles, possessive pronouns, demonstrative adjectives, and modal verb forms)</li>
-					<li>Other stopwords were included based upon the particular context of this analysis (for example: words denoting structural components of literary texts, common verbs such as ‘argues’, ‘describes’, ‘highlights’, or ‘indicates’, and common phrases marking the progression of academic argument such as ‘although’, ‘however’, ‘nevertheless’, or ‘therefore’)</li></li>
+					<li>Other stopwords were included based upon the particular context of this analysis (for example: words denoting structural components of literary texts, common verbs such as ‘argues’, ‘describes’, ‘highlights’, or ‘indicates’, and common phrases marking the progression of academic argument such as ‘although’, ‘however’, ‘nevertheless’, or ‘therefore’)</li>
+					</ul></li>
 				<li>A function to remove tokens which appear 3 times or less from the previous dictionary</li>
 				<li>A function to return a new dictionary containing only the top 150 tokens</li>
 				<li>A function to convert this new dictionary into a Pandas DataFrame</li>
@@ -92,7 +94,7 @@
 			</ul>
 			<p>The code of these functions can be seen below.</p><br>
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
-			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
+			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script><br>
 			</div>
 			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic.</p>
 			
@@ -106,11 +108,11 @@
 						<li>Aestheticism/divinity</li>
 						<li>Worldliness/earthliness</li>
 						<li>Areas of philosophy</li>
+						<li>Intellectual faculties</li>
 					</ul>
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<ul>
-						<li>Intellectual faculties</li>
 						<li>Critics</li>
 						<li>Figures/movements of influence on Gracián</li>
 						<li>Other texts by Gracián</li>
@@ -124,14 +126,8 @@
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences</h3><br>
 			<p>XXX</p>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
-			<p>XXX</p>
-			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
-			<p>XXX</p>
-			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
-			<p>XXX</p>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences Using Ventor Embeddings</h3><br>
+			<p>[Insert analysis of key terms carried out using vector embeddings - GloVe or Word2Vec]</p>
                     </div>
                 </div>
             </div>
