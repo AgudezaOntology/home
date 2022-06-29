@@ -59,28 +59,31 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Sources</h3><br>
                         <p>The purpose of having concrete sources of data to form the basis of the Agudeza Ontology is to make sure that the Requirements and Competency Questions which will be formulated before constructing the ontology accurately match the critical debate of the domain we wish formalise.</p>
-			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:
+			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:</p>
+			<div class="ml-5">
 			<ul>
 				<li>Two complementary articles entitled “Gracián’s ‘Agudeza y arte de ingenio’”, written by Edward Sarmiento and published in 1932</li>
 				<li>An article entitled “‘Concept’ and ‘Conceit’: An Aspect of Comparative Literary History”, written by Alexander Parker and published in 1982</li>
 				<li>A chapter entitled “The ‘Agudeza y arte de ingenio’” from my own PhD thesis, the overall title of which is “Acquired Ingenuity: The Conflation of Prudence With Ingenio in the Works of Baltasar Gracián”, submitted in 2020</li>
 			</ul>
-			</p>
+			</div>
 			<p>These articles have been chosen to represent the state of scholarship on Gracián’s ‘Agudeza’ at separate and discrete points of time, allowing consistencies and developments in scholarship across time to emerge clearly and to be taken into account in the construction of the Agudeza Ontology.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Cleaning the Data</h3><br>
-			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:
+			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:</p>
+			<div class="ml-5">
 			<ul>
 				<li>Paragraphs were eliminated</li>
 				<li>All punctuation marks were eliminated (full stops, commas, colons, semi-colons, double quotation marks, single quotation marks, brackets, hyphens, question marks, forward slashes, and ellipses)</li>
 				<li>All numbers were eliminated</li>
 				<li>Signifiers of possession in the form "’s" were eliminated, leaving just the primary word</li>
 			</ul>
-		    	</p>
+		    	</div>
 			<p>The txt files of the cleaned data sources can be found <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Processing the Data</h3><br>
-			<p>A series of functions were written in Python to enable processing of the data. These included:
+			<p>A series of functions were written in Python to enable processing of the data. These included:</p>
+			<div class="ml-5">
 			<ul>
 				<li>A function to tokenise the text into a list of separate strings</li>
 				<li>A function to create a dictionary of how many times each token appears</li>
@@ -94,7 +97,7 @@
 				<li>A function to convert this new dictionary into a Pandas DataFrame</li>
 				<li>A function to save the aforementioned DataFrame as a CSV file</li>
 			</ul>
-		 	</p>
+		    	</div>
 			<p>The code of these functions can be seen below.</p><br>
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
@@ -403,7 +406,8 @@
   </div>
 	<p></p>
 			
-			<p>Several similarities, as well as differences, between critical emphases can begin to be teased out. For example:
+			<p>Several similarities, as well as differences, between critical emphases can begin to be teased out. For example:</p>
+			<div class="ml-5">
 				<ul>
 					<li>All critics place an equal degree of focus on the idea of rhetoric and language</li>
 					<li>All critics place an equal degree of focus on the idea of connection-making</li>
@@ -417,7 +421,7 @@
 					<li>Only Beattie infuses her analysis with a consideration of Gracián’s other works; Sarmiento and Parker consider the ‘Agudeza’ in isolation</li>
 					<li>There are several key terms which are the focus of all critics’ analyses: Parker considers this in an international context (Spanish and Italian) and has several words representing the same ideas</li>
 				</ul>
-			</p>
+			</div>
              
 	
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences in Prevalence of Key Terms</h3><br>
@@ -436,7 +440,7 @@
                             </a>
                         </li>
                         <li class="nav-item" data-aos="zoom-in">
-                            <a class="nav-link" data-bs-toggle="tab" href="#Concepto">
+                            <a class="nav-link" data-bs-toggle="tab" href="#concepto">
                                 <p style="font-size:9pt">Concepto</p>
                             </a>
                         </li>
@@ -446,7 +450,7 @@
                             </a>
                         </li>
                         <li class="nav-item" data-aos="zoom-in">
-                            <a class="nav-link"  data-bs-toggle="tab" href="#Conceptus">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#conceptus">
                                <p style="font-size:9pt">Conceptus</p>
                             </a>
                         </li>
@@ -456,7 +460,7 @@
                             </a>
                         </li>
                         <li class="nav-item" data-aos="zoom-in">
-            			    <a class="nav-link" data-bs-toggle="tab" href="#Reason">
+            			    <a class="nav-link" data-bs-toggle="tab" href="#reason">
                                 <p style="font-size:9pt">Reason</p>
                             </a>
                         </li>
@@ -676,7 +680,8 @@
   </div>
 	<p></p>
 		
-			<p>Even when taking into account differences in the length of each critic's analysis, several broad generalisations can be made from the above observations:
+			<p>Even when taking into account differences in the length of each critic's analysis, several broad generalisations can be made from the above observations:</p>
+			<div class="ml-5">
 			<ul>
 				<li>The idea of the ‘concepto’ is a key focus of all three critics</li>
 				<li>The idea of ‘agudeza’ is a key focus of all three critics</li>
@@ -687,7 +692,7 @@
 				<li>The idea of the ‘conceit’ is a central idea for all key critics, but it is the prime focus for Sarmiento and Parker, while it is of secondary focus for Beattie</li>
 				<li>The idea of ‘reason’ is of relatively high importance for Sarmiento and Beattie, but of low importance for Parker</li>	
 			</ul>
-			</p>
+			</div>
 			<p>Despite using the same vocabulary – the vocabulary of the primary text text after all – the critics clearly place different emphases on different facets of Gracián’s thought, implying that their understanding of each key term may be different.</p>
 			<p>Taking a closer look at the frequency of these key terms within the analysis of each critic is important at this stage, allowing us to begin to conceptualise the ways in which critics differ in their analyses of Gracián’s ‘Agudeza’  - differences in approach that the Agudeza Ontology can express, map, and represent.</p>
 			
