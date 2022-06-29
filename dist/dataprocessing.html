@@ -73,35 +73,33 @@
 				<li>Paragraphs were eliminated</li>
 				<li>All punctuation marks were eliminated (full stops, commas, colons, semi-colons, double quotation marks, single quotation marks, brackets, hyphens, question marks, forward slashes, and ellipses)</li>
 				<li>All numbers were eliminated</li>
-				<li>•	Signifiers of possession in the form “’s” were eliminated, leaving just the primary word</li>
-			<ul>
+				<li>Signifiers of possession in the form "’s" were eliminated, leaving just the primary word</li>
+			</ul>
+			<p>The txt files of the cleaned data sources can be found <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Processing the Data</h3><br>
 			<p>A series of functions were written in Python to enable processing of the data. These included:</p>
 			<ul>
 				<li>A function to tokenise the text into a list of separate strings</li>
 				<li>A function to create a dictionary of how many times each token appears</li>
-				<li>A function to remove certain stopwords from the previous dictionary</li>
+				<li>A function to remove certain stopwords from the previous dictionary. These were chosen after careful consideration of their singularity and importance within the context of the <i>Agudeza</i>:
+					<li>Many stopwords represent common parts of speech which are negligible for nearly every computational analysis, regardless of context (for example: subject pronouns, definite and indefinite articles, possessive pronouns, demonstrative adjectives, and modal verb forms)</li>
+					<li>Other stopwords were included based upon the particular context of this analysis (for example: words denoting structural components of literary texts, common verbs such as ‘argues’, ‘describes’, ‘highlights’, or ‘indicates’, and common phrases marking the progression of academic argument such as ‘although’, ‘however’, ‘nevertheless’, or ‘therefore’)</li></li>
 				<li>A function to remove tokens which appear 3 times or less from the previous dictionary</li>
 				<li>A function to return a new dictionary containing only the top 150 tokens</li>
 				<li>A function to convert this new dictionary into a Pandas DataFrame</li>
 				<li>A function to save the aforementioned DataFrame as a CSV file</li>
 			</ul>
-			<p>The stopwords removed from the tokens dictionary were chosen after careful consideration of their singularity and importance within the context of the <i>Agudeza</i>:</p>
-			<p>The code of these functions can be seen below.</p>
-			<ul>
-				<li>Many stopwords represent common parts of speech which are negligible for nearly every computational analysis, regardless of context (for example: subject pronouns, definite and indefinite articles, possessive pronouns, demonstrative adjectives, and modal verb forms)</li>
-				<li>Other stopwords were included based upon the particular context of this analysis (for example: words denoting structural components of literary texts, common verbs such as ‘argues’, ‘describes’, ‘highlights’, or ‘indicates’, and common phrases marking the progression of academic argument such as ‘although’, ‘however’, ‘nevertheless’, or ‘therefore’)</li>
-			</ul>
+			<p>The code of these functions can be seen below.</p><br>
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
-			</div><br>
+			</div>
 			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Similarities</h3><br>
 			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the ‘Agudeza’. The groupings observed are the following:</p>
 			<div class="row justify-content-center">
-				<div class="col-md-4 col-sm-12 text-center">
+				<div class="col-md-4 col-sm-12">
 					<ul>
 						<li>Rhetoric and language</li>
 						<li>Connection-making</li>
@@ -110,7 +108,7 @@
 						<li>Areas of philosophy</li>
 					</ul>
 				</div>
-				<div class="col-md-4 col-sm-12 text-center">
+				<div class="col-md-4 col-sm-12">
 					<ul>
 						<li>Intellectual faculties</li>
 						<li>Critics</li>
