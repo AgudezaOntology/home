@@ -99,6 +99,7 @@
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
 			</div><br>
+			<p></p>
 			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic. These CSV files are available <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Similarities</h3><br>
@@ -399,13 +400,299 @@
                   </div>
 					
 	  </div>
-  </div><br>
+  </div>
+	<p></p>
+			
+			<p>Several similarities, as well as differences, between critical emphases can begin to be teased out. For example:
+				<ul>
+					<li>All critics place an equal degree of focus on the idea of rhetoric and language</li>
+					<li>All critics place an equal degree of focus on the idea of connection-making</li>
+					<li>All critics place an equal degree of focus on the idea of aestheticism/divinity (an interesting difference is the extent to which each critic intertwines the aesthetic with the divine: Sarmiento does not; Parker and Beattie do)</li>
+					<li>Beattie places the strongest degree of focus on the idea of worldliness/earthliness which is nearly absent in Sarmiento and Parker</li>
+					<li>Beattie considers more philosophical branches in her analysis</li>
+					<li>In terms of the intellectual faculties all critics address the idea of reason but differ within this</li>
+					<li>Different symbols are used by each critic: those of Sarmiento pertain to fire and light; those of Parker pertain, generally, to love; those of Beattie pertain to darkness and light</li>
+					<li>Sarmiento references no other critics in his analysis, while Parker mentions only Sarmiento. Beattie references many</li>
+					<li>Parker considers the biggest range of influences on Gracián and agrees with Sarmiento on the influence of Classicism; Beattie does not mention this at all</li>
+					<li>Only Beattie infuses her analysis with a consideration of Gracián’s other works; Sarmiento and Parker consider the ‘Agudeza’ in isolation</li>
+					<li>There are several key terms which are the focus of all critics’ analyses: Parker considers this in an international context (Spanish and Italian) and has several words representing the same ideas</li>
+				</ul>
+			</p>
              
 	
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences</h3><br>
-			<p>XXX</p>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences in Prevalence of Key Terms</h3><br>
+			<p>As is to be expected, there are several key terms which appear frequently in the work of all 3 critics. However, given they are key terms within the critical debate, it is worth noting the position at which each word appears in the frequency table of each critic.</p>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences Using Vector Embeddings</h3><br>
+			<div class="container bcontent">
+                    <ul class="nav nav-tabs nav-justified mb-4" id="tabs" role="tablist">
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link active show" data-bs-toggle="tab" href="#ingenio">
+                                <p style="font-size:9pt">Ingenio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link" data-bs-toggle="tab" href="#agudeza">
+                                <p style="font-size:9pt">Agudeza</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#Concepto">
+                                <p style="font-size:9pt">Concepto</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#conceit">
+                               <p style="font-size:9pt">Conceit</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#Conceptus">
+                               <p style="font-size:9pt">Conceptus</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#wit">
+                               <p style="font-size:9pt">Wit</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link" data-bs-toggle="tab" href="#Reason">
+                                <p style="font-size:9pt">Reason</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#gusto">
+                                <p style="font-size:9pt">Gusto</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#ser">
+                               <p style="font-size:9pt">Ser</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#parecer">
+                               <p style="font-size:9pt">Parecer</p>
+                            </a>
+                        </li>
+                    </ul>
+				
+			
+		<div class="tab-content" data-aos="fade-up">
+			
+                  <div class="tab-pane show active" class="justify-content-md-center" id="ingenio" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Frequency 13, position 14</td>
+                                    		<td>Frequency 10, position 28</td>
+                                    		<td>Frequency 101, position 2</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+		
+		<div class="tab-pane" class="justify-content-md-center" id="agudeza" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Frequency 39, position 3</td>
+                                    		<td>Frequency 24, position 4</td>
+                                    		<td>Frequency 185, position 1</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+		
+		<div class="tab-pane" class="justify-content-md-center" id="concepto" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Conceptos: Frequency 13, position 25; Concepto: Frequency 7, position 54</td>
+                                    		<td>Conceptos: Frequency 13, position 19; Concepto: Frequency 41, position 3</td>
+                                    		<td>Frequency 95, position 15</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="conceit" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Conceit: Frequency 111, position 1; Conceits: Frequency 16, position 11</td>
+                                    		<td>Conceit: Frequency 52, position 1; Conceits: Frequency 18, position 10</td>
+                                    		<td>Frequency 22, position 15</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="conceptus" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Absent</td>
+                                    		<td>Frequency 7, position 53</td>
+                                    		<td>Frequency 33, position 7</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="wit" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Absent</td>
+                                    		<td>Wit: Frequency 54, position 2; Witty: Frequency 13, position 20</td>
+                                    		<td>Absent</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="reason" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Frequency 9, position 32</td>
+                                    		<td>Frequency 4, position 142</td>
+                                    		<td>Frequency 17, position 22</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="gusto" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>Frequency 7, position 100</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="ser" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>Frequency 25, position 10</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="parecer" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>Frequency 25, position 11</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		
+	
+	  </div>
+  </div>
+	<p></p>
+		
+			<p>Even when taking into account differences in the length of each critic's analysis, several broad generalisations can be made from the above observations:
+			<ul>
+				<li>The idea of the ‘concepto’ is a key focus of all three critics</li>
+				<li>The idea of ‘agudeza’ is a key focus of all three critics</li>
+				<li>The idea of ‘ingenio’ is central for Beattie, while it is of secondary importance for Sarmiento and Parker</li>
+				<li>For Beattie the terms ‘gusto’, ‘ser’, and ‘parecer’ are key terms, but they are not considered at all in Sarmiento and Parker’s analysis</li>
+				<li>For Parker ‘wit’ is one of the most important ideas, while it is not considered at all by Sarmiento and Beattie</li>
+				<li>For Beattie and Parker ‘conceptus’ is a key idea, while it is not considered at all by Sarmiento. ‘Conceptus’ is a more prominent idea for Beattie than it is for Parker</li>
+				<li>The idea of the ‘conceit’ is a central idea for all key critics, but it is the prime focus for Sarmiento and Parker, while it is of secondary focus for Beattie</li>
+				<li>The idea of ‘reason’ is of relatively high importance for Sarmiento and Beattie, but of low importance for Parker</li>	
+			</ul>
+			</p>
+			<p>Despite using the same vocabulary – the vocabulary of the primary text text after all – the critics clearly place different emphases on different facets of Gracián’s thought, implying that their understanding of each key term may be different.</p>
+			<p>Taking a closer look at the frequency of these key terms within the analysis of each critic is important at this stage, allowing us to begin to conceptualise the ways in which critics differ in their analyses of Gracián’s ‘Agudeza’  - differences in approach that the Agudeza Ontology can express, map, and represent.</p>
+			
+
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences in Prevalence of Key Terms Using Vector Embeddings</h3><br>
 			<p>[Insert analysis of key terms carried out using vector embeddings - GloVe or Word2Vec]</p>
                     </div>
                 </div>
