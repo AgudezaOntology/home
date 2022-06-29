@@ -46,8 +46,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1 style="font-family:HeaderFont">Agudeza Ontology</h1>
-                            <span class="subheading" style="color:#ffbf00">Representing the universal discourse of critical debate surrounding Baltasar Gracián's <i>Agudeza y arte de ingenio</i></span>
+                            <h1 style="font-family:HeaderFont">Data Processing</h1>
+                            <span class="subheading" style="color:#ffbf00">Discovering the domain through the analysis of 3 data sources</i></span>
                         </div>
                     </div>
                 </div>
@@ -57,25 +57,83 @@
          <main class="mb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-			<h3 style="font-family:HeaderFont; color:#ffbf00">Who is Baltasar Gracián and what is the <i>Agudeza y arte de ingenio</i>?</h3>
-			<div class="row justify-content-center">
-				<div class="col-md-3 col-sm-12 text-center mb-3 mr-2" style="height=350px">
-					<img src="ArtedeIngenioEdit.png" height="335px"></img>
-				</div>
-				<div class="col-md-3 col-sm-12 text-center mb-3" style="height=350px">
-					<img src="GraciánPortraitWikipedia.jpg" height="335px"></img>
-				</div>
-				<div class="col-md-3 col-sm-12 text-center mb-3 ml-2" style="height=350px">
-					<img src="Agudeza_y_arte_de_ingenio_1648.jpg" height="335px"></img>
-				</div>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Sources</h3><br>
+                        <p>The purpose of having concrete sources of data to form the basis of the Agudeza Ontology is to make sure that the Requirements and Competency Questions which will be formulated before constructing the ontology accurately match the critical debate of the domain we wish formalise.</p>
+			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:</p>
+			<ul>
+				<li>Two complementary articles entitled “Gracián’s ‘Agudeza y arte de ingenio’”, written by Edward Sarmiento and published in 1932</li>
+				<li>An article entitled “‘Concept’ and ‘Conceit’: An Aspect of Comparative Literary History”, written by Alexander Parker and published in 1982</li>
+				<li>A chapter entitled “The ‘Agudeza y arte de ingenio’” from my own PhD thesis, the overall title of which is “Acquired Ingenuity: The Conflation of Prudence With Ingenio in the Works of Baltasar Gracián”, submitted in 2020</li>
+			</ul>
+			<p>These articles have been chosen to represent the state of scholarship on Gracián’s ‘Agudeza’ at separate and discrete points of time, allowing consistencies and developments in scholarship across time to emerge clearly and to be taken into account in the construction of the Agudeza Ontology.</p>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Cleaning the Data</h3><br>
+			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:</p>
+			<ul>
+				<li>Paragraphs were eliminated</li>
+				<li>All punctuation marks were eliminated (full stops, commas, colons, semi-colons, double quotation marks, single quotation marks, brackets, hyphens, question marks, forward slashes, and ellipses)</li>
+				<li>All numbers were eliminated</li>
+				<li>•	Signifiers of possession in the form “’s” were eliminated, leaving just the primary word</li>
+			<ul>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Processing the Data</h3><br>
+			<p>A series of functions were written in Python to enable processing of the data. These included:</p>
+			<ul>
+				<li>A function to tokenise the text into a list of separate strings</li>
+				<li>A function to create a dictionary of how many times each token appears</li>
+				<li>A function to remove certain stopwords from the previous dictionary</li>
+				<li>A function to remove tokens which appear 3 times or less from the previous dictionary</li>
+				<li>A function to return a new dictionary containing only the top 150 tokens</li>
+				<li>A function to convert this new dictionary into a Pandas DataFrame</li>
+				<li>A function to save the aforementioned DataFrame as a CSV file</li>
+			</ul>
+			<p>The stopwords removed from the tokens dictionary were chosen after careful consideration of their singularity and importance within the context of the <i>Agudeza</i>:</p>
+			<p>The code of these functions can be seen below.</p>
+			<ul>
+				<li>Many stopwords represent common parts of speech which are negligible for nearly every computational analysis, regardless of context (for example: subject pronouns, definite and indefinite articles, possessive pronouns, demonstrative adjectives, and modal verb forms)</li>
+				<li>Other stopwords were included based upon the particular context of this analysis (for example: words denoting structural components of literary texts, common verbs such as ‘argues’, ‘describes’, ‘highlights’, or ‘indicates’, and common phrases marking the progression of academic argument such as ‘although’, ‘however’, ‘nevertheless’, or ‘therefore’)</li>
+			</ul>
+			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
 			</div><br>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
+			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic.</p>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00">What does the Agudeza Ontology achieve?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Similarities</h3><br>
+			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the ‘Agudeza’. The groupings observed are the following:</p>
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-sm-12 text-center">
+					<ul>
+						<li>Rhetoric and language</li>
+						<li>Connection-making</li>
+						<li>Aestheticism/divinity</li>
+						<li>Worldliness/earthliness</li>
+						<li>Areas of philosophy</li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-12 text-center">
+					<ul>
+						<li>Intellectual faculties</li>
+						<li>Critics</li>
+						<li>Figures/movements of influence on Gracián</li>
+						<li>Other texts by Gracián</li>
+						<li>Key terms</li>
+					</ul>
+				</div>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00">What was the workflow towards the production of the Agudeza Ontology?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+			</div>
+			<p>The basis of the formulation of these groups is outlined below.</p>
+				
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences</h3><br>
+			<p>XXX</p>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
+			<p>XXX</p>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
+			<p>XXX</p>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">What was the workflow towards the production of the Agudeza Ontology?</h3><br>
+			<p>XXX</p>
                     </div>
                 </div>
             </div>
