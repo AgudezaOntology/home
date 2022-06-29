@@ -59,26 +59,28 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Sources</h3><br>
                         <p>The purpose of having concrete sources of data to form the basis of the Agudeza Ontology is to make sure that the Requirements and Competency Questions which will be formulated before constructing the ontology accurately match the critical debate of the domain we wish formalise.</p>
-			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:</p>
+			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:
 			<ul>
 				<li>Two complementary articles entitled “Gracián’s ‘Agudeza y arte de ingenio’”, written by Edward Sarmiento and published in 1932</li>
 				<li>An article entitled “‘Concept’ and ‘Conceit’: An Aspect of Comparative Literary History”, written by Alexander Parker and published in 1982</li>
 				<li>A chapter entitled “The ‘Agudeza y arte de ingenio’” from my own PhD thesis, the overall title of which is “Acquired Ingenuity: The Conflation of Prudence With Ingenio in the Works of Baltasar Gracián”, submitted in 2020</li>
 			</ul>
+			</p>
 			<p>These articles have been chosen to represent the state of scholarship on Gracián’s ‘Agudeza’ at separate and discrete points of time, allowing consistencies and developments in scholarship across time to emerge clearly and to be taken into account in the construction of the Agudeza Ontology.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Cleaning the Data</h3><br>
-			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:</p>
+			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:
 			<ul>
 				<li>Paragraphs were eliminated</li>
 				<li>All punctuation marks were eliminated (full stops, commas, colons, semi-colons, double quotation marks, single quotation marks, brackets, hyphens, question marks, forward slashes, and ellipses)</li>
 				<li>All numbers were eliminated</li>
 				<li>Signifiers of possession in the form "’s" were eliminated, leaving just the primary word</li>
 			</ul>
+		    	</p>
 			<p>The txt files of the cleaned data sources can be found <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Processing the Data</h3><br>
-			<p>A series of functions were written in Python to enable processing of the data. These included:</p>
+			<p>A series of functions were written in Python to enable processing of the data. These included:
 			<ul>
 				<li>A function to tokenise the text into a list of separate strings</li>
 				<li>A function to create a dictionary of how many times each token appears</li>
@@ -92,14 +94,15 @@
 				<li>A function to convert this new dictionary into a Pandas DataFrame</li>
 				<li>A function to save the aforementioned DataFrame as a CSV file</li>
 			</ul>
+		 	</p>
 			<p>The code of these functions can be seen below.</p><br>
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
-			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script><br>
-			</div>
-			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic.</p>
+			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
+			</div><br>
+			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic. These CSV files are available <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Similarities</h3><br>
-			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the ‘Agudeza’. The groupings observed are the following:</p>
+			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the ‘Agudeza’. The following are the lexical groupings observed.</p>
 			<div class="row justify-content-center">
 				<div class="col-md-4 col-sm-12">
 					<ul>
@@ -121,7 +124,295 @@
 				</div>
 			
 			</div>
-			<p>The basis of the formulation of these groups is outlined below.</p>
+			<p>The table below provides the tokens from each of the 3 critics, justifying the lexical groupings above.</p>
+			
+			<div class="container bcontent">
+                    <ul class="nav nav-tabs nav-justified mb-4" id="tabs" role="tablist">
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link active show" data-bs-toggle="tab" href="#rhetoricandlanguage">
+                                <p style="font-size:9pt">Rhetoric</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link" data-bs-toggle="tab" href="#connectionmaking">
+                                <p style="font-size:9pt">Connections</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#aestheticism/divinity">
+                                <p style="font-size:9pt">Aestheticism</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#worldliness/earthliness">
+                               <p style="font-size:9pt">Worldliness</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#areasofphilosophy">
+                               <p style="font-size:9pt">Philosophy</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#intellectualfaculties">
+                               <p style="font-size:9pt">Intellect</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link" data-bs-toggle="tab" href="symbols">
+                                <p style="font-size:9pt">Symbols</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#critics">
+                                <p style="font-size:9pt">Critics</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#figures/movementsofinfluence">
+                               <p style="font-size:9pt">Influences</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#othertexts">
+                               <p style="font-size:9pt">Other texts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link"  data-bs-toggle="tab" href="#keyterms">
+                               <p style="font-size:9pt">Key terms</p>
+                            </a>
+                        </li>
+                    </ul><br>
+				
+			
+		<div class="tab-content" data-aos="fade-up">
+			
+                  <div class="tab-pane show active" class="justify-content-md-center" id="rhetoricandlanguage" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Simile  Figure  Metaphor  Artificio  Rhetoric  Theory  Speech  Analogy  Figures  Style  Words  Term  Poetic  Percepts  Symbolism  Brevity</td>
+                                    		<td>Wit  Metaphor  Witty  Poet  Terminology  Poetry  Rhetoric  Theory  Metaphysical  Poetic  Language  Style  Writing  Theorists  Metaphorical  Metaphors</td>
+                                    		<td>Rhetoric  Artificio  Language  Expression  Term  Words  Rhetorical  Estilo  Artificiosa  Artificial  Figuras  Retóricas</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+		
+		<div class="tab-pane" class="justify-content-md-center" id="connectionmaking" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Comparison  Relationship  Semejanza  Similarity  Relationships  Continuation  Whole  Elements  Classification  Distinction  Together  Correspondencias  Division  Order  Construction  Proportion</td>
+                                    		<td>Comparison  Association  Comparisons  Complex  Relationship  Relationships</td>
+                                    		<td>Order  Correspondencia  Variety  Connections  Relation  Interconnectedness  Composición  Ratio  Elements  Coherence  Links</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+		
+		<div class="tab-pane" class="justify-content-md-center" id="aestheticism/divinity" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Mind  Art  Essence  Mental  Arte  Beauty  Devoted  Intellectual  Love  Intellect  Emotional  Clear  Truth  Striking  Soul  Pure  Light  Special</td>
+                                    		<td>Mind  Love  Thought  Arte  Level  Intellectual  Ponderación  Jesuit  Art  Sermons  Metaphysical  Aesthetic  Intellect  Beauty  Jesuits  Religious  Meditation</td>
+                                    		<td>Mind  Ser  Aesthetic  Perfect  Creator  Access  Accessed  Conscious  Source  Art  Perfección  God  Sky  Intellect  Verdad  Beyond  Formalis  Divine  Truth  Sun  Creation  Rapture  Admiración  Perception  Realm  Realm  Clarity  Perceive  Formal  Beauty  Hermosura  Cielo  Elevate  Forma  Transient</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="worldliness/earthliness" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Examples  Matter  Nature  Objects  Sin  Flame  World</td>
+                                    		<td>Particular  Context  Contemporary</td>
+                                    		<td>Ability  Deliberated  Temporary  Exterior  Existence  Product  Realms  Practice  Moment  Exist  Action  Reality  Materia  Appearance  Man  World  Parecer  Experience  Variety  Time  Surface  Content  Changeability  Particular  Act</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="areasofphilosophy" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Understanding</td>
+                                    		<td>Understanding  Metaphysical</td>
+                                    		<td>Epistemological  Entendimiento  Understand  Perception  Perceive</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="intellectualfaculties" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Ingenio  Reason</td>
+                                    		<td>Wit  Witty  Reason</td>
+                                    		<td>Ingenio  Reason  Rational  Gusto  </td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="symbols" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fire  Ashes  Flame  Light</td>
+                                    		<td>Lips  Roses  Lion</td>
+                                    		<td>Stars  Sky  Night  Sun  Cielo  Cave</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="critics" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>-</td>
+                                    		<td>Sarmiento</td>
+                                    		<td>Parker  Sarmiento  Andersen  Blanco  Woods</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="figures/movementsofinfluence" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Classical  Martial</td>
+                                    		<td>Martial  Sarbiewski  Góngora  Marino  Tasso  Classical  Jesuits  Peregrini  Italian</td>
+                                    		<td>Suárez  Cave(Platonism)</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="othertexts" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>-</td>
+                                    		<td>-</td>
+                                    		<td>Andrenio  Criticón  Critilo  Héroe  Fiction  Narrative</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+			
+		<div class="tab-pane" class="justify-content-md-center" id="keyterms" role="tabpanel">
+			<table class="table table-striped" style="font-size:14px">
+				<thead>
+					<tr>
+						<th>Sarmiento</th>
+						<th>Parker</th>
+						<th>Beattie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Conceit  Agudeza  Conceits  Conceptist  Ingenio  Reason  Concepto  Concept</td>
+                                    		<td>Conceit  Wit  Witty  Concepto  Agudeza  Concept  Conceits  Concetto  Concetti  Concepts  Ingenio  Conceptus  Conceptismo  Acutezza  Reason</td>
+                                    		<td>Agudeza  Ingenio  Concepto  Conceptus  Ser  Parecer  Conceit  Concept  Reason</td>
+					</tr>
+				</tbody>
+                        </table>
+                  </div>
+					
+	  </div>
+  </div><br>
+             
+           
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
 				
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Differences</h3><br>
 			<p>XXX</p>
