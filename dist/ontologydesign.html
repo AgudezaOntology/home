@@ -177,8 +177,28 @@
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Object and Data Properties (With Domains and Ranges)</h3>
 			<p>One particularity of the Agudeza Ontology is that the links between the individuals of the class KeyTerm are highly significant and are often more revealing than the classes of the ontology themselves. Therefore, these property links need to be curated carefully, taking into account the specific subclasses of KeyTerm that they can be used connect.</p>
-			<p>Object property links between entities of the class KeyTerm:</p>
-			<div class="justify-content-center">
+			<div class="container bcontent">
+                    <ul class="nav nav-tabs nav-justified mb-4" id="tabs" role="tablist">
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link active show" data-bs-toggle="tab" href="#objectpropertieskeyterms">
+                                <p style="font-size:9pt">Object properties between KeyTerms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+            			    <a class="nav-link" data-bs-toggle="tab" href="#otherobjectproperties">
+                                <p style="font-size:9pt">Other object properties</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in">
+                            <a class="nav-link" data-bs-toggle="tab" href="#dataproperties">
+                                <p style="font-size:9pt">Data properties</p>
+                            </a>
+                        </li>
+	
+	
+			<div class="tab-content" data-aos="fade-up">
+			
+                  <div class="tab-pane show active" class="justify-content-md-center" id="objectpropertieskeyterms" role="tabpanel">
 				<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
@@ -262,8 +282,7 @@
                         </table>
 			</div>
 			
-			<p>Other object properties:</p>
-			<div class="justify-content-center">
+			<div class="tab-pane" class="justify-content-md-center" id="otherobjectproperties" role="tabpanel">
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
@@ -327,8 +346,7 @@
 			</table>
 			</div>
 	
-			<p>Data properties:</p>
-			<div class="justify-content-center">
+			<div class="tab-pane" class="justify-content-md-center" id="dataproperties" role="tabpanel">
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
@@ -350,7 +368,8 @@
 					</tr>
 				</tbody>
 			</table>
-			</div>
+		</div>
+	</div>
 			<p></p>
 			
 					
