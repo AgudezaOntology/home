@@ -57,45 +57,58 @@
          <main class="mb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-			<h3 style="font-family:HeaderFont; color:#ffbf00">Representing Knowledge Using the Agudeza Ontology</h3>
-                        <p>In order to represent knowledge using the Agudeza Ontology, the ontology has been used to create, populate, and visualise an RDF knowledge graph to represent the agudeza-universe of each of the 3 initial critics. The same steps could be taken to represent the agudeza-universe of any critic of the <i>Agudeza</i>.</p>
-			<p>The Python code depicting the creation of the 3 knowldege graphs is provided below, and can is available <a href="#">here</a>.</p>
-			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Representing Knowledge Using the Agudeza Ontology</h3>
+                        <p>In order to represent knowledge using the Agudeza Ontology, the ontology has been used to create, populate, and visualise an RDF knowledge graph to represent the agudeza-universe of each of the 3 initial critics. It it worth noting that the Agudeza Ontology is applicable to any critic of the <i>Agudeza</i> and the same steps could be taken to represent the agudeza-universe of any other critical analysis.</p>
+			<p>In each of the following sections, the Python code via which each knowldege graph was created is provided, alongside its RDF serialisation in Turtle format, and a graph visualisation. These Python and ttl files are available <a href="https://github.com/AgudezaOntology/home/tree/master/dist/KGRDFFiles">here</a>.</p>
+			<p>Without yet moving onto the stage of Knowledge Extraction, the representation of knowledge related to the domain of critical debate surrounding Gracián's <i>Agudeza</i> allows us to see that the state of scholarship on the <i>Agudeza</i> has significantly advanced, having become patently more intricate and nuanced, since Sarmiento's 1932 article.</p>
+				
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Knowledge Graph: Sarmiento</h3>
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/6fb997451d419ce13a7338e598295577.js"></script>
 			</div>
 			<p></p>
 			
 			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+				<script src="https://gist.github.com/RebeccaJillianBeattie/b60eed626d1f510235eea8bab46de804.js"></script>
+			</div>
+			<p></p>
+			
+			<div class="justify-content-center text-center">
+				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/SarmientoKGVisualisation.png"><img src="SarmientoKGVisualisation.png" width="900px"></img></a>
+			</div>
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Knowledge Graph: Parker</h3>
+		    	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/ec7679707a899dd7fc78c0cf9d7d2fa3.js"></script>
 			</div>
 			<p></p>
+		    
+		    	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+				<script src="https://gist.github.com/RebeccaJillianBeattie/73c3df89191a287f6cbbd682e432ae5d.js"></script>
+			</div>
+			<p></p>
+		    	
+		    	<div class="justify-content-center text-center">
+				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/ParkerKGVisualisation.png"><img src="ParkerKGVisualisation.png" width="900px"></img></a>
+			</div>
 			
-			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Knowledge Graph: Beattie</h3>
+		 	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 			<script src="https://gist.github.com/RebeccaJillianBeattie/a4c5555b71a7ca7068aca5ab2cb82105.js"></script>
 			</div>
 			<p></p>
-			
-			<p>The above graphs were serialised in Turtle format before being inputted into the RDF Grapher to create the following visualisations. The ttl files are available <a href="https://github.com/AgudezaOntology/home/tree/master/dist/KGRDFFiles">here</a>.</p>
-			
-			<h3 style="font-family:HeaderFont; color:#ffbf00">Knowledge Graph: Sarmiento</h3>
-			
-			<div class="justify-content-center">
-				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/SarmientoKGVisualisation.png"><img src="SarmientoKGVisualisation.png" width="800px"></img></a>
+		 
+		 	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+				<script src="https://gist.github.com/RebeccaJillianBeattie/2294fc414653ba4c4850a4b803ab42e8.js"></script>
 			</div>
-                        <p>XXX</p>
-			
-			<h3 style="font-family:HeaderFont; color:#ffbf00">Knowledge Graph: Parker</h3>
-		    	<div class="justify-content-center">
-				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/ParkerKGVisualisation.png"><img src="ParkerKGVisualisation.png" width="800px"></img></a>
+			<p></p>
+		 
+		 	<div class="justify-content-center text-center">
+				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/BeattieKGVisualisation.png"><img src="BeattieKGVisualisation.png" width="900px"></img></a>
 			</div>
-			<p>XXX</p>
-			
-			<h3 style="font-family:HeaderFont; color:#ffbf00">Knowledge Graph: Beattie</h3>
-		 	<div class="justify-content-center">
-				<a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/BeattieKGVisualisation.png"><img src="BeattieKGVisualisation.png" width="800px"></img></a>
-			</div>
-			<p>XXX</p>
+	    
+	    		<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Observations From Knowledge Representation</h3>
+		 	
 			
                     </div>
                 </div>
