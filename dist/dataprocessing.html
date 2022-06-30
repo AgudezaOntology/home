@@ -62,12 +62,12 @@
 			<p>The data which forms the basis of the Agudeza Ontology has been extracted from three sources:</p>
 			<div class="ml-5">
 			<ul>
-				<li>Two complementary articles entitled “Gracián’s ‘Agudeza y arte de ingenio’”, written by Edward Sarmiento and published in 1932</li>
+				<li>Two complementary articles entitled “Gracián’s <i>Agudeza y arte de ingenio</i>”, written by Edward Sarmiento and published in 1932</li>
 				<li>An article entitled “‘Concept’ and ‘Conceit’: An Aspect of Comparative Literary History”, written by Alexander Parker and published in 1982</li>
 				<li>A chapter entitled “The ‘Agudeza y arte de ingenio’” from my own PhD thesis, the overall title of which is “Acquired Ingenuity: The Conflation of Prudence With Ingenio in the Works of Baltasar Gracián”, submitted in 2020</li>
 			</ul>
 			</div>
-			<p>These articles have been chosen to represent the state of scholarship on Gracián’s ‘Agudeza’ at separate and discrete points of time, allowing consistencies and developments in scholarship across time to emerge clearly and to be taken into account in the construction of the Agudeza Ontology.</p>
+			<p>These articles have been chosen to represent the state of scholarship on Gracián’s <i>Agudeza</i> at separate and discrete points of time, allowing consistencies and developments in scholarship across time to emerge clearly and to be taken into account in the construction of the Agudeza Ontology.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Cleaning the Data</h3><br>
 			<p>The first step in the process of being able to use these articles as data sources was to process and clean them. This involved completely standardising their format. Within Notebook++ the following steps were taken using regular expression searches:</p>
@@ -103,10 +103,10 @@
 			<script src="https://gist.github.com/RebeccaJillianBeattie/a2ce8fabc116b2a50060746d3633609d.js"></script>
 			</div><br>
 			<p></p>
-			<p>The 3 critical examinations of Gracián’s ‘Agudeza’ which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic. These CSV files are available <a href="#">here</a>.</p>
+			<p>The 3 critical examinations of Gracián’s <i>Agudeza</i> which make up the source data of this project were inputted into each of these functions, resulting in a CSV file of the top 150 tokens for each critic’s work. This allows us to compare and contrast key terms and their prevalence within the approach of each critic. These CSV files are available <a href="#">here</a>.</p>
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Data Analysis: Similarities</h3><br>
-			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the ‘Agudeza’. The following are the lexical groupings observed.</p>
+			<p>Observation of the CSV files of the 150 most frequent tokens used by each critic allows us to form logical groups of terms which share the same lexical space. These groupings help us to begin to formulate an idea of the key classes of ideas which make up the critical universe of the <i>Agudeza</i>. The following are the lexical groupings observed.</p>
 			<div class="row justify-content-center">
 				<div class="col-md-4 col-sm-12">
 					<ul>
@@ -488,6 +488,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -495,9 +496,16 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Frequency 13, position 14</td>
-                                    		<td>Frequency 10, position 28</td>
-                                    		<td>Frequency 101, position 2</td>
+						<td>Frequency</td>
+						<td>13</td>
+                                    		<td>10</td>
+                                    		<td>101</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>14</td>
+                                    		<td>28</td>
+                                    		<td>2</td>
 					</tr>
 				</tbody>
                         </table>
@@ -507,6 +515,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -514,9 +523,16 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Frequency 39, position 3</td>
-                                    		<td>Frequency 24, position 4</td>
-                                    		<td>Frequency 185, position 1</td>
+						<td>Frequency</td>
+						<td>39</td>
+                                    		<td>24</td>
+                                    		<td>185</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>3</td>
+                                    		<td>4</td>
+                                    		<td>1</td>
 					</tr>
 				</tbody>
                         </table>
@@ -526,6 +542,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -533,9 +550,16 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Conceptos: Frequency 13, position 25; Concepto: Frequency 7, position 54</td>
-                                    		<td>Conceptos: Frequency 13, position 19; Concepto: Frequency 41, position 3</td>
-                                    		<td>Frequency 95, position 15</td>
+						<td>Frequency</td>
+						<td>Conceptos: 13; Concepto: 7</td>
+                                    		<td>Conceptos: 13; Concepto: 41</td>
+                                    		<td>95</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Conceptos: 25; Concepto: 54</td>
+                                    		<td>Conceptos: 19; Concepto: 3</td>
+                                    		<td>15</td>
 					</tr>
 				</tbody>
                         </table>
@@ -545,6 +569,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -552,9 +577,16 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Conceit: Frequency 111, position 1; Conceits: Frequency 16, position 11</td>
-                                    		<td>Conceit: Frequency 52, position 1; Conceits: Frequency 18, position 10</td>
-                                    		<td>Frequency 22, position 15</td>
+						<td>Frequency</td>
+						<td>Conceit: 111; Conceits: 16</td>
+                                    		<td>Conceit: 52; Conceits: 18</td>
+                                    		<td>22</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Conceit: 1; Conceits: 11</td>
+                                    		<td>Conceit: 1; Conceits: 10</td>
+                                    		<td>15</td>
 					</tr>
 				</tbody>
                         </table>
@@ -564,6 +596,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -571,9 +604,16 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Frequency</td>
 						<td>Absent</td>
-                                    		<td>Frequency 7, position 53</td>
-                                    		<td>Frequency 33, position 7</td>
+                                    		<td>7</td>
+                                    		<td>33</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Absent</td>
+                                    		<td>53</td>
+                                    		<td>7</td>
 					</tr>
 				</tbody>
                         </table>
@@ -583,6 +623,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -590,8 +631,15 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Frequency</td>
 						<td>Absent</td>
-                                    		<td>Wit: Frequency 54, position 2; Witty: Frequency 13, position 20</td>
+                                    		<td>Wit: 54; Witty: 13</td>
+                                    		<td>Absent</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Absent</td>
+                                    		<td>Wit: 2; Witty: 20</td>
                                     		<td>Absent</td>
 					</tr>
 				</tbody>
@@ -602,6 +650,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -609,9 +658,16 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Frequency 9, position 32</td>
-                                    		<td>Frequency 4, position 142</td>
-                                    		<td>Frequency 17, position 22</td>
+						<td>Frequency</td>
+						<td>9</td>
+                                    		<td>4</td>
+                                    		<td>17</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>32</td>
+                                    		<td>142</td>
+                                    		<td>22</td>
 					</tr>
 				</tbody>
                         </table>
@@ -621,6 +677,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -628,9 +685,16 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Frequency</td>
 						<td>Absent</td>
                                     		<td>Absent</td>
-                                    		<td>Frequency 7, position 100</td>
+                                    		<td>7</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>100</td>
 					</tr>
 				</tbody>
                         </table>
@@ -640,6 +704,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -647,9 +712,16 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Frequency</td>
 						<td>Absent</td>
                                     		<td>Absent</td>
-                                    		<td>Frequency 25, position 10</td>
+                                    		<td>25</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>10</td>
 					</tr>
 				</tbody>
                         </table>
@@ -659,6 +731,7 @@
 			<table class="table table-striped" style="font-size:14px">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Sarmiento</th>
 						<th>Parker</th>
 						<th>Beattie</th>
@@ -666,9 +739,16 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Frequency</td>
 						<td>Absent</td>
                                     		<td>Absent</td>
-                                    		<td>Frequency 25, position 11</td>
+                                    		<td>25</td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>Absent</td>
+                                    		<td>Absent</td>
+                                    		<td>11</td>
 					</tr>
 				</tbody>
                         </table>
@@ -694,7 +774,7 @@
 			</ul>
 			</div>
 			<p>Despite using the same vocabulary – the vocabulary of the primary text text after all – the critics clearly place different emphases on different facets of Gracián’s thought, implying that their understanding of each key term may be different.</p>
-			<p>Taking a closer look at the frequency of these key terms within the analysis of each critic is important at this stage, allowing us to begin to conceptualise the ways in which critics differ in their analyses of Gracián’s ‘Agudeza’  - differences in approach that the Agudeza Ontology can express, map, and represent.</p>
+			<p>Taking a closer look at the frequency of these key terms within the analysis of each critic is important at this stage, allowing us to begin to conceptualise the ways in which critics differ in their analyses of Gracián’s <i>Agudeza</i> - differences in approach that the Agudeza Ontology can express, map, and represent.</p>
 			
 
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences in Prevalence of Key Terms Using Vector Embeddings</h3><br>
