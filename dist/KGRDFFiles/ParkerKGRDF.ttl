@@ -1,0 +1,78 @@
+@prefix agdza: <http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+agdza:Ingenio agdza:separateFrom agdza:reason .
+
+agdza:OntologicalRealm owl:subClassOf agdza:KeyTerm .
+
+agdza:Parker a agdza:Critic ;
+    agdza:wrote agdza:ParkerArticle .
+
+agdza:ParkerArticle a agdza:Analysis ;
+    agdza:considers agdza:agudeza,
+        agdza:conceit,
+        agdza:concepto,
+        agdza:conceptus,
+        agdza:ingenio,
+        agdza:reason,
+        agdza:wit ;
+    agdza:hasDate 1982 ;
+    agdza:hasPhilosophicalScope agdza:Rhetoric ;
+    agdza:hasTitle "'Concept' and 'Conceit': An Aspect of Comparative Literary History" ;
+    agdza:references agdza:SarmientoArticle ;
+    agdza:usesSymbol agdza:lion,
+        agdza:lips,
+        agdza:rose ;
+    agdza:writtenBy agdza:Parker .
+
+agdza:Sarmiento a agdza:Critic ;
+    agdza:wrote agdza:SarmientoArticle .
+
+agdza:ingenio a agdza:IntellectualFaculty .
+
+agdza:SarmientoArticle a agdza:Analysis ;
+    agdza:writtenBy agdza:Sarmiento .
+
+agdza:conceit a agdza:CentralConcept ;
+    agdza:equivalentTo agdza:agudeza .
+
+agdza:lion a agdza:SymbolicImagery ;
+    agdza:symbolises agdza:parecer .
+
+agdza:lips a agdza:SymbolicImagery ;
+    agdza:symbolises agdza:parecer .
+
+agdza:reason a agdza:IntellectualFaculty ;
+    agdza:contributesTo agdza:ConnectionMaking .
+
+agdza:rose a agdza:SymbolicImagery ;
+    agdza:symbolises agdza:parecer .
+
+agdza:wit a agdza:IntellectualFaculty ;
+    agdza:equivalentTo agdza:agudeza .
+
+agdza:IntellectualFaculty owl:subClassOf agdza:KeyTerm .
+
+agdza:concepto a agdza:CentralConcept ;
+    agdza:notComponentOf agdza:conceptus ;
+    agdza:resultsIn agdza:agudeza .
+
+agdza:conceptus a agdza:CentralConcept ;
+    agdza:notComposedOf agdza:agudeza,
+        agdza:concepto .
+
+agdza:CentralConcept owl:subClassOf agdza:KeyTerm .
+
+agdza:parecer a agdza:OntologicalRealm ;
+    agdza:representedBy agdza:lion,
+        agdza:lips,
+        agdza:rose .
+
+agdza:agudeza a agdza:CentralConcept ;
+    agdza:belongsTo agdza:parecer ;
+    agdza:equivalentTo agdza:conceit,
+        agdza:wit ;
+    agdza:notComponentOf agdza:conceptus ;
+    agdza:resultsFrom agdza:concepto .
