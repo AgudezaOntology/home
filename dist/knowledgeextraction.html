@@ -83,7 +83,17 @@
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ2</b>: How do the key terms considered by each critic link with each other?</p>
-					
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;<br>
+        				prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt;<br>
+        				SELECT ?subject ?property ?object<br>
+        				WHERE {?subject a ?TypeS .<br>
+                			?TypeS owl:subClassOf agdza:KeyTerm .<br>
+                			?object a ?TypeO .<br>
+                			?TypeO owl:subClassOf agdza:KeyTerm .<br>
+                			?subject ?property ?object } <br>
+        				"""</code>
 				</div>
 			</div>
 			
@@ -149,13 +159,30 @@
 					
 				</div>
 			</div>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Results: Sarmiento</h3>
+			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			<script src="https://gist.github.com/RebeccaJillianBeattie/f6d107cda9448c334cf8756746cba400.js"></script>
+			</div>
+			<p></p>
 			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Results: Parker</h3>
+			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			X
+			</div>
+			<p></p>
 			
-			<p>XXX</p>
-			<p>XXX</p>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Results: Beattie</h3>
+			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			X
+			</div>
+			<p></p>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">XXX</h3>
-			<p>XXX</p>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Broadening the Scope of Knowledge Extraction From the Agudeza Ontology</h3>
+			<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+			<script src="https://gist.github.com/RebeccaJillianBeattie/6fb997451d419ce13a7338e598295577.js"></script>
+			</div>
+			<p></p>
+			
                     </div>
                 </div>
             </div>
