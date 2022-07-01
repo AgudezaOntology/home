@@ -1,0 +1,568 @@
+@prefix : <http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix agdza: <http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#> .
+@base <http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology> .
+
+<http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#domain
+rdfs:domain rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#range
+rdfs:range rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#subClassOf
+rdfs:subClassOf rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#disjointWith
+owl:disjointWith rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#inverseOf
+owl:inverseOf rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#ComposedOf
+agdza:ComposedOf rdf:type owl:ObjectProperty ;
+                 owl:inverseOf agdza:componentOf ;
+                 rdfs:domain agdza:CentralConcept ;
+                 rdfs:range agdza:CentralConcept ;
+                 rdfs:comment "Indicates than one central, conceptual idea is made up from and constituted by another" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#belongsTo
+agdza:belongsTo rdf:type owl:ObjectProperty ;
+                rdfs:domain agdza:CentralConcept ;
+                rdfs:range agdza:OntologicalRealm ;
+                rdfs:comment "Connects a central, conceptual idea with a specific ontological realm (i.e. the worldly or the other-worldly realm)" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#componentOf
+agdza:componentOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain agdza:CentralConcept ;
+                  rdfs:range agdza:CentralConcept ;
+                  rdfs:comment "Indicates than one central, conceptual idea makes up and contributes to another" ;
+                  owl:inverseOf agdza:ComposedOf .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#considers
+agdza:considers rdf:type owl:ObjectProperty ;
+                rdfs:domain agdza:Analysis ;
+                rdfs:range agdza:KeyTerm ;
+                rdfs:comment "Connects a piece of academic scholarship to the key terms within Gracian's oeuvre with which it engages" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#contributesTo
+agdza:contributesTo rdf:type owl:ObjectProperty ;
+                    rdfs:domain agdza:IntellectualFaculty ;
+                    rdfs:range agdza:ConnectionMaking ;
+                    rdfs:comment "Connects a faculty of the intellect with the process of forging links and connections" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#equivalentTo
+agdza:equivalentTo rdf:type owl:ObjectProperty ;
+                   owl:inverseOf agdza:equivalentTo ;
+                   rdf:type owl:SymmetricProperty ;
+                   rdfs:domain agdza:CentralConcept ,
+                               agdza:IntellectualFaculty ;
+                   rdfs:range agdza:CentralConcept ,
+                              agdza:IntellectualFaculty ;
+                   owl:propertyDisjointWith agdza:separateFrom ;
+                   rdfs:comment "Connects central concepts with each other or with intellectual faculties to denote that they are understood by the critic to be synonyms" ;
+                   owl:disjointWith agdza:separateFrom .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#hasPhilosophicalScope
+agdza:hasPhilosophicalScope rdf:type owl:ObjectProperty ;
+                            rdfs:domain agdza:Analysis ;
+                            rdfs:range agdza:PhilosophicalScope ;
+                            rdfs:comment "Connects a piece of academic scholarship with a philosophical area of study to highlight the philosophical lens through which a critic's analysis has been refracted" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#interdependentOn
+agdza:interdependentOn rdf:type owl:ObjectProperty ;
+                       owl:inverseOf agdza:interdependentOn ;
+                       rdf:type owl:SymmetricProperty ;
+                       rdfs:domain agdza:CentralConcept ,
+                                   agdza:OntologicalRealm ;
+                       rdfs:range agdza:CentralConcept ,
+                                  agdza:OntologicalRealm ;
+                       rdfs:comment "Connects central concepts or ontological realms to highlight that they are mutually dependent on each other and cannot function independently" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#notComponentOf
+agdza:notComponentOf rdf:type owl:ObjectProperty ;
+                     owl:inverseOf agdza:notComposedOf ;
+                     rdfs:domain agdza:CentralConcept ;
+                     rdfs:range agdza:CentralConcept ;
+                     rdfs:comment "Connects central concepts with other central concepts to highlight that the critic considers the range concept to not be comprised of the domain concept" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#notComposedOf
+agdza:notComposedOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain agdza:CentralConcept ;
+                    rdfs:range agdza:CentralConcept ;
+                    rdfs:comment "Connects central concepts with other central concepts to highlight that the critic considers the range concept to not be a comprising component of the domain concept" ;
+                    owl:inverseOf agdza:notComponentOf .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#perceivedBy
+agdza:perceivedBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf agdza:perceives ;
+                  rdfs:domain agdza:CentralConcept ;
+                  rdfs:range agdza:IntellectualFaculty ;
+                  rdfs:comment "Connects central concepts with an intellectual faculty to highlight the specific power of the intellect which has access to this concept in order to reveal and experience it" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#perceives
+agdza:perceives rdf:type owl:ObjectProperty ;
+                rdfs:domain agdza:IntellectualFaculty ;
+                rdfs:range agdza:CentralConcept ;
+                rdfs:comment "Connects an intellectual faculty to a central concept to highlight the specific power of the intellect which has access to this concept in order to reveal and experience it" ;
+                owl:inverseOf agdza:perceivedBy .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#perfectedBy
+agdza:perfectedBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf agdza:perfects ;
+                  rdfs:domain agdza:IntellectualFaculty ;
+                  rdfs:range agdza:IntellectualFaculty ;
+                  rdfs:comment "Connects one faculty of the intellect to another to highlight the intellectual faculty which can lead to the refinement of the other" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#perfectedInto
+agdza:perfectedInto rdf:type owl:ObjectProperty ;
+                    rdfs:domain agdza:IntellectualFaculty ;
+                    rdfs:range agdza:IntellectualFaculty ;
+                    rdfs:comment "Connects one intellectual faculty to another to indicate that the former can be honed and refined until it morphs into the latter" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#perfects
+agdza:perfects rdf:type owl:ObjectProperty ;
+               rdfs:domain agdza:IntellectualFaculty ;
+               rdfs:range agdza:IntellectualFaculty ;
+               rdfs:comment "Connects one faculty of the intellect to another to highlight the intellectual faculty which refines the other" ;
+               owl:inverseOf agdza:perfectedBy .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#referencedBy
+agdza:referencedBy rdf:type owl:ObjectProperty ;
+                   owl:inverseOf agdza:references ;
+                   rdfs:domain agdza:Analysis ,
+                               agdza:OtherWorks ;
+                   rdfs:range agdza:Analysis ;
+                   rdfs:comment "Connects academic scholarship and other works by Gracian to academic scholarship in order to highlight the other scholarship and other works by Gracian mentioned by the critic in question" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#references
+agdza:references rdf:type owl:ObjectProperty ;
+                 rdfs:domain agdza:Analysis ;
+                 rdfs:range agdza:Analysis ,
+                            agdza:OtherWorks ;
+                 rdfs:comment "Connects academic scholarship to other academic scholarship and other works by Gracian in order to highlight the other scholarship and other works by Gracian mentioned by the critic in question" ;
+                 owl:inverseOf agdza:referencedBy .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#resultsFrom
+agdza:resultsFrom rdf:type owl:ObjectProperty ;
+                  owl:inverseOf agdza:resultsIn ;
+                  rdfs:domain agdza:CentralConcept ,
+                              agdza:IntellectualFaculty ;
+                  rdfs:range agdza:CentralConcept ,
+                             agdza:IntellectualFaculty ;
+                  rdfs:comment "Connects a central concept or intellectual faculty with another central concept or intellectual faculty in order to indicate a process of causation between the two" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#resultsIn
+agdza:resultsIn rdf:type owl:ObjectProperty ;
+                rdfs:domain agdza:CentralConcept ,
+                            agdza:IntellectualFaculty ;
+                rdfs:range agdza:CentralConcept ,
+                           agdza:IntellectualFaculty ;
+                rdfs:comment "Connects a central concept or intellectual faculty with another central concept or intellectual faculty in order to indicate a process of causation between the two" ;
+                owl:inverseOf agdza:resultsFrom .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#separateFrom
+agdza:separateFrom rdf:type owl:ObjectProperty ;
+                   rdfs:domain agdza:CentralConcept ,
+                               agdza:IntellectualFaculty ;
+                   rdfs:range agdza:CentralConcept ,
+                              agdza:IntellectualFaculty ;
+                   rdfs:comment "Connects central concepts and intellectual faculties to highlight that a critic understands these concepts and faculties to be definitively distinct" ;
+                   owl:disjointWith agdza:equivalentTo .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#symbolisedBy
+agdza:symbolisedBy rdf:type owl:ObjectProperty ;
+                   owl:inverseOf agdza:symbolises ;
+                   rdfs:domain agdza:KeyTerm ,
+                               agdza:PhilosophicalScope ;
+                   rdfs:range agdza:SymbolicImagery ;
+                   rdfs:comment "Connects a key term of any sub-class with an instance of symbolic imagery to highlight that that abstract concept is represented by the indicated physical manifestation" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#symbolises
+agdza:symbolises rdf:type owl:ObjectProperty ;
+                 rdfs:domain agdza:SymbolicImagery ;
+                 rdfs:range agdza:KeyTerm ,
+                            agdza:PhilosophicalScope ;
+                 rdfs:comment "Connects an instance of symbolic imagery with a key term of any sub-class to highlight that that physical manifestation represents the indicated abstract concept" ;
+                 owl:inverseOf agdza:symbolisedBy .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#usesSymbol
+agdza:usesSymbol rdf:type owl:ObjectProperty ;
+                 rdfs:domain agdza:Analysis ;
+                 rdfs:range agdza:SymbolicImagery ;
+                 rdfs:comment "Connects a piece of academic scholarship with an instance of symbolic imagery to highlight that that piece of scholarship utilises and makes reference to a particular symbol" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#writtenBy
+agdza:writtenBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf agdza:wrote ;
+                rdfs:domain agdza:Analysis ;
+                rdfs:range agdza:Critic ;
+                rdfs:comment "Connects a piece of academic scholarship with a critic to denote the creator of the piece of scholarship" .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#wrote
+agdza:wrote rdf:type owl:ObjectProperty ;
+            rdfs:domain agdza:Critic ;
+            rdfs:range agdza:Analysis ;
+            rdfs:comment "Connects a a critic with a piece of academic scholarship to denote the academic work created by that critic" ;
+            owl:inverseOf agdza:writtenBy .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#hasDate
+agdza:hasDate rdf:type owl:DatatypeProperty ;
+              rdfs:domain agdza:Analysis ;
+              rdfs:range xsd:positiveInteger ,
+                         ""^^xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#hasTitle
+agdza:hasTitle rdf:type owl:DatatypeProperty ;
+               rdfs:domain agdza:Analysis ;
+               rdfs:range xsd:string ,
+                          "" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Analysis
+agdza:Analysis rdf:type owl:Class ;
+               rdfs:comment "A piece of academic scholarship which has Gracian's 'Agudeza y arte de ingenio' as a focus"@en ;
+               owl:sameAs <http://purl.org/dc/terms/BibliographicResource> ,
+                          <http://purl.org/spar/fabio/Work> .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#CentralConcept
+agdza:CentralConcept rdf:type owl:Class ;
+                     rdfs:subClassOf agdza:KeyTerm ;
+                     rdfs:comment "An aspect of Gracian's thought which is pivotal to the 'Agudeza y arte de ingenio'"@en .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#ConnectionMaking
+agdza:ConnectionMaking rdf:type owl:Class ;
+                       rdfs:comment "The generation of links between physcial or conceptual items"@en .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Critic
+agdza:Critic rdf:type owl:Class ;
+             rdfs:comment "An academic scholar who engages with Gracian's 'Agudeza y arte de ingenio'"@en ;
+             owl:sameAs <http://purl.org/dc/terms/Agent> .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#IntellectualFaculty
+agdza:IntellectualFaculty rdf:type owl:Class ;
+                          rdfs:subClassOf agdza:KeyTerm ;
+                          rdfs:comment "A mental capacity which enables 'perception' in the broadest sense"@en .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#KeyTerm
+agdza:KeyTerm rdf:type owl:Class ;
+              rdfs:comment "A recurring and central idea in Gracian's oeuvre"@en ;
+              owl:sameAs <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#OntologicalRealm
+agdza:OntologicalRealm rdf:type owl:Class ;
+                       rdfs:subClassOf agdza:KeyTerm ;
+                       rdfs:comment "A remit of existence: worldly or other-worldly"@en .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#OtherWorks
+agdza:OtherWorks rdf:type owl:Class ;
+                 rdfs:comment "A work by Gracian besides the 'Agudeza y arte de ingenio'"@en ;
+                 owl:sameAs <http://purl.org/dc/terms/BibliographicResource> ,
+                            <http://purl.org/spar/fabio/ArtisticWork> .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#PhilosophicalScope
+agdza:PhilosophicalScope rdf:type owl:Class ;
+                         rdfs:comment "An academic area of study"@en .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#SymbolicImagery
+agdza:SymbolicImagery rdf:type owl:Class ;
+                      rdfs:comment "A physical manifestation used to represent something abstract and conceptual"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Aesthetics
+agdza:Aesthetics rdf:type owl:NamedIndividual ,
+                          agdza:PhilosophicalScope .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Agudeza
+agdza:Agudeza rdf:type owl:NamedIndividual ,
+                       agdza:CentralConcept .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Andersen
+agdza:Andersen rdf:type owl:NamedIndividual ,
+                        agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#AndersenArticle
+agdza:AndersenArticle rdf:type owl:NamedIndividual ,
+                               agdza:Analysis .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Beattie
+agdza:Beattie rdf:type owl:NamedIndividual ,
+                       agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#BeattieChapter
+agdza:BeattieChapter rdf:type owl:NamedIndividual ,
+                              agdza:Analysis .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Blanco
+agdza:Blanco rdf:type owl:NamedIndividual ,
+                      agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#BlancoBook
+agdza:BlancoBook rdf:type owl:NamedIndividual ,
+                          agdza:Analysis .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Cave
+agdza:Cave rdf:type owl:NamedIndividual ,
+                    agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Comulgatorio
+agdza:Comulgatorio rdf:type owl:NamedIndividual ,
+                            agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Conceit
+agdza:Conceit rdf:type owl:NamedIndividual ,
+                       agdza:CentralConcept .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Concepto
+agdza:Concepto rdf:type owl:NamedIndividual ,
+                        agdza:CentralConcept .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Conceptus
+agdza:Conceptus rdf:type owl:NamedIndividual ,
+                         agdza:CentralConcept .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Criticon
+agdza:Criticon rdf:type owl:NamedIndividual ,
+                        agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Discreto
+agdza:Discreto rdf:type owl:NamedIndividual ,
+                        agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Epistemology
+agdza:Epistemology rdf:type owl:NamedIndividual ,
+                            agdza:PhilosophicalScope .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Ethics
+agdza:Ethics rdf:type owl:NamedIndividual ,
+                      agdza:PhilosophicalScope .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Fire
+agdza:Fire rdf:type owl:NamedIndividual ,
+                    agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Gusto
+agdza:Gusto rdf:type owl:NamedIndividual ,
+                     agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Heroe
+agdza:Heroe rdf:type owl:NamedIndividual ,
+                     agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Ingenio
+agdza:Ingenio rdf:type owl:NamedIndividual ,
+                       agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Intuition
+agdza:Intuition rdf:type owl:NamedIndividual ,
+                         agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Juicio
+agdza:Juicio rdf:type owl:NamedIndividual ,
+                      agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Light
+agdza:Light rdf:type owl:NamedIndividual ,
+                     agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Lion
+agdza:Lion rdf:type owl:NamedIndividual ,
+                    agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Lips
+agdza:Lips rdf:type owl:NamedIndividual ,
+                    agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Ontology
+agdza:Ontology rdf:type owl:NamedIndividual ,
+                        agdza:PhilosophicalScope .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Oraculo
+agdza:Oraculo rdf:type owl:NamedIndividual ,
+                       agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Parecer
+agdza:Parecer rdf:type owl:NamedIndividual ,
+                       agdza:OntologicalRealm .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Parker
+agdza:Parker rdf:type owl:NamedIndividual ,
+                      agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#ParkerArticle
+agdza:ParkerArticle rdf:type owl:NamedIndividual ,
+                             agdza:Analysis .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Politico
+agdza:Politico rdf:type owl:NamedIndividual ,
+                        agdza:OtherWorks .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Prudence
+agdza:Prudence rdf:type owl:NamedIndividual ,
+                        agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Reason
+agdza:Reason rdf:type owl:NamedIndividual ,
+                      agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Rhetoric
+agdza:Rhetoric rdf:type owl:NamedIndividual ,
+                        agdza:PhilosophicalScope .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Rose
+agdza:Rose rdf:type owl:NamedIndividual ,
+                    agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Sarmiento
+agdza:Sarmiento rdf:type owl:NamedIndividual ,
+                         agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#SarmientoArticle
+agdza:SarmientoArticle rdf:type owl:NamedIndividual ,
+                                agdza:Analysis .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Ser
+agdza:Ser rdf:type owl:NamedIndividual ,
+                   agdza:OntologicalRealm .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#StarrySky
+agdza:StarrySky rdf:type owl:NamedIndividual ,
+                         agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Sun
+agdza:Sun rdf:type owl:NamedIndividual ,
+                   agdza:SymbolicImagery .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Wit
+agdza:Wit rdf:type owl:NamedIndividual ,
+                   agdza:IntellectualFaculty .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#Woods
+agdza:Woods rdf:type owl:NamedIndividual ,
+                     agdza:Critic .
+
+
+###  http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#WoodsBook
+agdza:WoodsBook rdf:type owl:NamedIndividual ,
+                         agdza:Analysis .
+
+
+[ rdf:type [ rdf:type owl:Restriction ;
+             owl:onProperty agdza:hasDate ;
+             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+             owl:onDataRange xsd:nonPositiveInteger
+           ]
+] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
