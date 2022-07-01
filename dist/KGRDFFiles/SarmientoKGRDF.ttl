@@ -1,0 +1,68 @@
+@prefix agdza: <http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+agdza:Aesthetics a agdza:PhilosophicalScope .
+
+agdza:Rhetoric a agdza:PhilosophicalScope .
+
+agdza:Sarmiento a agdza:Critic ;
+    agdza:wrote agdza:SarmientoArticle .
+
+agdza:SarmientoArticle a agdza:Analysis ;
+    agdza:considers agdza:agudeza,
+        agdza:conceit,
+        agdza:concepto,
+        agdza:ingenio,
+        agdza:reason,
+        agdza:wit ;
+    agdza:hasDate 1932 ;
+    agdza:hasPhilosophicalScope agdza:Aesthetics,
+        agdza:Rhetoric ;
+    agdza:hasTitle "Gracián's Agudeza y arte de ingenio" ;
+    agdza:usesSymbol agdza:fire,
+        agdza:light ;
+    agdza:writtenBy agdza:Sarmiento .
+
+agdza:ingenio a agdza:IntellectualFaculty ;
+    agdza:contributesTo agdza:ConnectionMaking .
+
+agdza:parecer a agdza:OntologicalRealm .
+
+agdza:reason a agdza:IntellectualFaculty ;
+    agdza:contributesTo agdza:ConnectionMaking .
+
+agdza:OntologicalRealm owl:subClassOf agdza:KeyTerm .
+
+agdza:conceit a agdza:CentralConcept ;
+    agdza:equivalentTo agdza:agudeza .
+
+agdza:fire a agdza:SymbolicImagery ;
+    agdza:symbolises agdza:agudeza .
+
+agdza:ser a agdza:OntologicalRealm ;
+    agdza:symbolisedBy agdza:light .
+
+agdza:wit a agdza:IntellectualFaculty ;
+    agdza:equivalentTo agdza:agudeza .
+
+agdza:CentralConcept owl:subClassOf agdza:KeyTerm .
+
+agdza:IntellectualFaculty owl:subClassOf agdza:KeyTerm .
+
+agdza:concepto a agdza:CentralConcept ;
+    agdza:belongsTo agdza:ser ;
+    agdza:resultsIn agdza:agudeza ;
+    agdza:symbolisedBy agdza:light .
+
+agdza:light a agdza:SymbolicImagery ;
+    agdza:symbolises agdza:concepto,
+        agdza:ser .
+
+agdza:agudeza a agdza:CentralConcept ;
+    agdza:belongsTo agdza:parecer ;
+    agdza:equivalentTo agdza:conceit,
+        agdza:wit ;
+    agdza:resultsFrom agdza:concepto ;
+    agdza:symbolisedBy agdza:fire .
