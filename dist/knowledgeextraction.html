@@ -75,7 +75,7 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ1</b>: Which key terms does each critic consider?</p>
-					<code style="font-size:9pt">"""<br>
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
         				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt; <br>
         				SELECT ?KeyTerm <br>
         				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:considers ?KeyTerm} <br>
@@ -90,32 +90,62 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ3</b>: How do key terms used by the critic contribute to connection making?</p>
-					
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				SELECT ?KeyTerm ?Link<br>
+        				WHERE {?KeyTerm ?Link agdza:ConnectionMaking}<br>
+        				"""</code>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ4</b>: What is the philosophical scope of each critic’s analysis?</p>
-					
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+       					SELECT ?PhilosophicalScope<br>
+        				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:hasPhilosophicalScope ?PhilosophicalScope}<br>
+        				"""</code>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ5</b>: What symbolic imagery is used by each critic?</p>
-					
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				SELECT ?SymbolicImagery<br>
+        				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:usesSymbol ?SymbolicImagery}<br>
+        				"""</code>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ6</b>: What does the symbolic imagery used by each critic represent?</p>
-					
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				SELECT ?SymbolicImagery ?ThingRepresented<br>
+        				WHERE {?SymbolicImagery agdza:symbolises ?ThingRepresented}<br>
+        				"""</code>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ7</b>: To which other critics does each critic refer?</p>
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;<br>
+        				SELECT ?Referent<br>
+        				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:references ?Referent .<br>
+                				?Referent rdf:type agdza:Analysis}<br>
+        				"""</code>
 					
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ8</b>: To which other works by Gracián does each critic refer?</p>
+					<code style="font-size:9pt; color:#ffbf00">"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt;<br>
+        				prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;<br>
+        				SELECT ?Referent<br>
+        				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:references ?Referent . <br>
+                				?Referent rdf:type agdza:OtherWork}<br>
+        				"""</code>
 					
 				</div>
 			</div>
