@@ -71,10 +71,15 @@
 			
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Formal Competency Questions</h3>
 			<p>Informal competency questions must first be converted into machine-readable, formal competency questions. These are expressed using SPARQL (SPARQL Protocol and RDF Query Language), which returns the selected information from a knowledge graph by navigating through its subject-predicate-object triples, looking for nodes and edges which match the conditions specified by the query.</p>
+			<p>The phrase *INSTANCESCHOLARLYWORK* in the SPARQL queries below indicates a variable which must be adapted depending on the particular critic whose agudeza-universe is represented by the knowledge graph being queried. In our use cases, this variable is therefore: SarmientoArticle, ParkerArticle, or BeattieChapter.</p>
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ1</b>: Which key terms does each critic consider?</p>
-					
+					<code>"""<br>
+        				prefix agdza: &lt;http://www.semanticweb.org/rjbea/ontologies/2022/5/AgudezaOntology#&gt; <br>
+        				SELECT ?KeyTerm <br>
+        				WHERE {agdza:*INSTANCESCHOLARLYWORK* agdza:considers ?KeyTerm} <br>
+					"""</code>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<p><b>CQ2</b>: How do the key terms considered by each critic link with each other?</p>
