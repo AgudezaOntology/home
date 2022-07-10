@@ -516,9 +516,24 @@
 			</div>
 			<p></p>
 			
-			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Knowledge Extraction: Inferential Statistics</h3>
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Broadening the Scope of Knowledge Extraction: Inference</h3>
 			<p>This section has used knowledge graphs created through the Agudeza Ontology to extract knowledge which is already explicitly recorded and available. However, also of interest is the possibility of inferring knowledge that is not immediately explicit.</p>
-			<p>Knowledge extraction is made up of a hybridisation of rule-based heuristics (i.e. graph based data analysis, as above) and statistical methods. We can therefore use inferential statistics to make broader inferences from a sample of data (e.g. several critics’ analyses of the <i>Agudeza</i>) to an entire population (e.g. all criticism on the <i>Agudeza</i>).</p>
+			<p>Some intuitive inferences can already begin to be proposed. For example:</p>
+			<div class="ml-5">
+			<ol>
+				<li>When the key term ‘conceit’ plays a highly significant role in a critic’s analysis, that analysis is refracted through the philosophical lens of Rhetoric</li>
+				<li>When the key term ‘ser’ plays a highly significant role in a critic’s analysis, that analysis is refracted through the philosophical lens of Aesthetics</li>
+				<li>When the key term ‘concepto’ is linked to the key term ‘agudeza’ via the object property ‘equivalentTo’, that analysis is refracted through the philosophical lens of Ontology</li>
+				<li>When the key terms ‘concepto’ and ‘agudeza’ are linked to each other via the object property ‘interdependentOn’, that analysis is refracted through the philosophical lens of Ontology, specifically with the interdependence of the worldly and other-worldly realms</li>
+			</ol>
+		    	</div>			
+			<p>Numbers 1 and 2 above refer to certain key terms playing a “highly significant role” within the analysis of a particular critic. This is explored in more detail in the next section using inferential statistics techniques to determine the significance of a given term within the context of another variable (the philosophical lens of the analysis, in this case).</p>
+			<p>However, significance could also be written into the knowledge graph itself using weighted edges, taken into consideration during analysis by a graph traversal algorithm, such as the A* search algorithm. For example: in the knowledge graph of Sarmiento’s analysis of the <i>Agudeza</i>, the nodes ‘SarmientoArticle’ and ‘conceit’ could be connected by the edge ‘considers’ with a larger weight than would be present, for example, in the knowledge graph of Beattie’s chapter, between the nodes ‘BeattieChapter’ and ‘conceit’, since the key word ‘conceit’ is indeed mentioned by both critics, but plays a much stronger role in Sarmiento’s analysis than in Beattie’s.</p>
+			<p>Weighted edges within the knowledge graphs adds further nuance to the agudeza-universe of each critic which could be picked up by graph traversal algorithms and used to make inferences of implicit knowledge.</p>
+			
+			
+			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">Inferential Statistics</h3>
+			<p>Knowledge extraction is made up of a hybridisation of rule-based heuristics (i.e. graph based data analysis, such as via a graph traversal algorithm) and statistical methods. We can therefore use inferential statistics to make broader inferences from a sample of data (e.g. several critics’ analyses of the <i>Agudeza</i>) to an entire population (e.g. all criticism on the <i>Agudeza</i>).</p>
 			<p>Inferential statistics involves formulating a hypothesis, carrying out initial descriptive statistics, testing assumptions, and then carrying out inferential statistics tests to calculate the probability of error, or p-value. The p-value tells us the significance of the studied phenomenon. A p-value of less than 5% is the usual threshold for a particular phenomenon to be considered significant. “Significant” indicates that the phenomenon is probably not random.</p>
 			
 			<p style="font-family:HeaderFont; font-size:20pt">Hypothesis</p>
