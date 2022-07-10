@@ -531,23 +531,34 @@
 				<img src="RDataSetUp.png" width="900px"></img>
 			</div>
 		 	<p></p>
-			<p>Below we see a box plot representing the means and dispersions of the relative frequency of the term ‘conceit’, depending upon whether the critic in question refracts their analysis through the philosophical lens of Rhetoric or not. This box plot is somewhat ambiguous: usually, if the boxes do not overlap, the difference between their means is highly significant; if the boxes overlap a lot, the difference between their means is unlikely to be significant; if the boxes overlap somewhat, as they do here, further tests are required to determine if the difference between means is significant or not.</p>
+		    	<div class="row">
+			<div class="col-md-6 col-sm-12">
+			<p>To the right we see a box plot representing the means and dispersions of the relative frequency of the term ‘conceit’, depending upon whether the critic in question refracts their analysis through the philosophical lens of Rhetoric or not. This box plot is somewhat ambiguous: usually, if the boxes do not overlap, the difference between their means is highly significant; if the boxes overlap a lot, the difference between their means is unlikely to be significant; if the boxes overlap somewhat, as they do here, further tests are required to determine if the difference between means is significant or not.</p>
+			</div>
+			<div class="col-md-6 col-sm-12">
 			<div class="justify-content-center text-center">
 				<img src="RBoxPlot.png" height="350px"></img>
 			</div>
-		 	<p></p>
+		   	</div>
+		 	</div>
 		    
 			<p style="font-family:HeaderFont">Test Assumptions</p>
-			<p>In order to progress towards the testing of the significance between the means, underlying assumptions must first be tested. Our first assumption is that the data for both subsets of Rhetoric is normally distributed. This is tested using a Shapiro-Wilk test. The second assumption is that the two variables exhibit the same dispersion, or at least do not differ significantly. This is tested using an F-Test. The results of these tests are below.</p>
-			<div class="justify-content-center text-center">
+			<div class="row">
+			<div class="col-md-6 col-sm-12">
+		 	<div class="justify-content-center text-center">
 				<img src="RShapiroWilkAndFTest.png" height="350px"></img>
 			</div>
-		 	<p></p>
+			 </div>
+		 	<div class="col-md-6 col-sm-12">
+			<p>In order to progress towards the testing of the significance between the means, underlying assumptions must first be tested. Our first assumption is that the data for both subsets of Rhetoric is normally distributed. This is tested using a Shapiro-Wilk test. The second assumption is that the two variables exhibit the same dispersion, or at least do not differ significantly. This is tested using an F-Test.</p>
 		 	<p>We see that the results of both the Shapiro-Wilk and F-Tests are well above 5%, meaning that distribution does not deviate significantly from normality, and dispersion does not differ significantly, respectively.</p>
-			
+			</div>
+		 	</div>
+				
+		 	<p style="font-family:HeaderFont">T-Test</p>
 			<p>Having confirmed our assumptions, we can finally test whether the difference in means between the relative frequency of the term ‘conceit’ in analyses refracted through the philosophical lens of Rhetoric or not is significant. This is done using a T-Test, shown below.</p>
 			<div class="justify-content-center text-center">
-				<img src="RTTest.png" width="900px"></img>
+				<img src="RTTest.png" height="300px"></img>
 			</div>
 		 	<p></p>
 	    		<p>According to this T-Test, the difference in means between the two independent samples is 12%, meaning it is decidedly <b><i>not</i></b> significant. Therefore, we have not gathered support for the initial hypothesis, and the relative frequency of the key term ‘conceit’ is <b><i>not</i></b> sufficient for us to infer the knowledge that the hypothesis proposed.</p>
