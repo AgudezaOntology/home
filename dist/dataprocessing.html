@@ -776,10 +776,11 @@
 
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences in Prevalence of Key Terms Using Vector Embeddings</h3><br>
 			<p>Vector embeddings allow us to map the vocabulary of a text onto a conceptual, 3D space. During this mapping, each word is assigned a numerical co-ordinate. We can then carry out mathematical computations on the words to find out which words are closer, and therefore more similar, to each other within the conceptual framework of the text.</p>
-		    	<p>The following key terms have been chosen to be explored using Word2Vec vector embeddings: “agudeza”, “conceit”, “concepto”, “ingenio”, and “reason”.  Sarmiento, Parker, and Beattie’s analyses were individually inputted into the following code. In order to ensure truly meaningful results, stop words were removed from the text of each critic’s analysis prior to processing. This code outputs the 4 words most commonly found in the vicinity of the aforementioned key words, with the implication that this makes them lexically similar. The code was written by Ivan Chen (explained <a href="https://towardsdatascience.com/word2vec-from-scratch-with-numpy-8786ddd49e72" here</a> and available to download <a href="https://github.com/ivanyschen/wrd_emb/blob/master/word2vec_skipgram_medium_v1.ipynb" here</a>).</p>
+		    	<p>The following key terms have been chosen to be explored using Word2Vec vector embeddings: “agudeza”, “conceit”, “concepto”, “ingenio”, and “reason”.  Sarmiento, Parker, and Beattie’s analyses were individually inputted into the following code. In order to ensure truly meaningful results, stop words were removed from the text of each critic’s analysis prior to processing. This code outputs the 4 words most commonly found in the vicinity of the aforementioned key words, with the implication that this makes them lexically similar. The code was written by Ivan Chen (explained <a href="https://towardsdatascience.com/word2vec-from-scratch-with-numpy-8786ddd49e72">here</a> and available to download <a href="https://github.com/ivanyschen/wrd_emb/blob/master/word2vec_skipgram_medium_v1.ipynb">here</a>).</p>
 		    	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 				<script src="https://gist.github.com/RebeccaJillianBeattie/68198fa2c5cf65b28f0c48feb468ab56.js"></script>
 			</div>
+		    	<p></p>
 			<p>The results for each critic are as follows:</p>
 		    	<div class="row">
 				<div class="col-md-4 col-sm-12">
@@ -811,6 +812,7 @@
 					</div>
 				</div>
 		    	</div>
+			<p></p>
 		    	
 		    	
 		    	<p>These results are somewhat distorted due to the fact that all critics frequently use several key words close together when referencing the text’s title, <i>Agudeza y arte de ingenio</i>. Nevertheless, we can begin to tease out some subtle differences between the critics:</p>
