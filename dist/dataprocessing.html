@@ -775,8 +775,25 @@
 			
 
 			<h3 style="font-family:HeaderFont; color:#ffbf00" class="text-center">A Closer Look at Differences in Prevalence of Key Terms Using Vector Embeddings</h3><br>
-			<p>Vector embeddings allow us to map the vocabulary of a text onto a conceptual, 3D space. During this mapping, each word is assigned a numerical co-ordinate. We can then carry out mathematical computations on the words to find out which words are closer, and therefore more similar, to each other within the conceptual framework of the text.</p>
-		    	<p>The following key terms have been chosen to be explored using Word2Vec vector embeddings: “agudeza”, “conceit”, “concepto”, “ingenio”, and “reason”.  Sarmiento, Parker, and Beattie’s analyses were individually inputted into the following code. In order to ensure truly meaningful results, stop words were removed from the text of each critic’s analysis prior to processing. This code outputs the 4 words most commonly found in the vicinity of the aforementioned key words, with the implication that this makes them lexically similar. The code was written by Ivan Chen (explained <a href="https://towardsdatascience.com/word2vec-from-scratch-with-numpy-8786ddd49e72">here</a> and available to download <a href="https://github.com/ivanyschen/wrd_emb/blob/master/word2vec_skipgram_medium_v1.ipynb">here</a>).</p>
+		    	<p>Vector embeddings allow us to map texts – or certain aspects of texts – into a conceptual, multi-dimensional space. During this mapping, each text is assigned a numerical co-ordinate, which can then be used to carry out mathematical calculations. The following key terms have been chosen to be explored in this way: “agudeza”, “conceit”, “concepto”, “ingenio”, and “reason”.</p>
+		    	<p>First, Gensim was used to create a corpus containing each critic’s analysis (pre-processed to remove stopwords and capital letters). The texts of the corpus were tokenised, a dictionary of tokens was created, and a unique integer id was assigned to each token. Each text in the corpus was then transformed into a vector representation, where each co-ordinate is in the format: (integer id of token, frequency of token). The full vector representation of each text is available <a href="https://raw.githubusercontent.com/AgudezaOntology/home/master/dist/FullVectors.txt"> here</a>.</p>
+		    	<p>Each text was then searched in order to isolate its vector representation with regards to the key words in question. This gave the following results (31 = agudeza, 174 = conceit, 183 = concepto, 522 = ingenio, 810 = reason):</p>
+		    	<ul>
+				<li>Sarmiento: [(31, 39), (174, 111), (183, 7), (522, 13), (810, 9)]</li>
+				<li>Parker: [(31, 24), (174, 52), (183, 43), (522, 10), (810, 4)]</li>
+				<li>Beattie: [(31, 185), (174, 22), (183, 95), (522, 101), (810, 17)]</li>
+				<li>TotalCorpus: [(31, 248), (174, 185), (183, 145), (522, 124), (810, 30)]</li>						
+			</ul>
+		    	<p>The code for all of these steps is below.</p>
+		    	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
+				<script src="https://gist.github.com/RebeccaJillianBeattie/9b71cda0ebc5f05f81903fb878c4f004.js"></script>
+			</div>
+			<p></p>
+
+		    	<p>These vectors were then uploaded into the Tensor Flow embeddings projector which, as well as visualising them, compared the similarity between the 3 critics’ analyses, based upon their use of key terms, using the Cosine distance, with the following conclusions: Sarmiento and Beattie’s analyses are the most similar (at a distance of 0.065), while Parker’s analysis is far from both Sarmiento’s and Beattie’s (0.381 and 0.363, respectively).</p>
+		    	<p>In addition, another version of vector embeddings designed by Ivan Chen (explained <a href="https://towardsdatascience.com/word2vec-from-scratch-with-numpy-8786ddd49e72">here</a> and available to download <a href="https://github.com/ivanyschen/wrd_emb/blob/master/word2vec_skipgram_medium_v1.ipynb">here</a>) was used in order to find the 4 words most commonly found in the vicinity of the aforementioned key words within the analysis of each critic, with the implication that this makes them lexically similar within that critic’s agudeza-universe. Sarmiento, Parker, and Beattie’s analyses were individually inputted into the following code.</p>
+		    	
+		    	
 		    	<div style="height:450px; overflow:auto" class="border border-2 border-dark rounded">
 				<script src="https://gist.github.com/RebeccaJillianBeattie/68198fa2c5cf65b28f0c48feb468ab56.js"></script>
 			</div>
