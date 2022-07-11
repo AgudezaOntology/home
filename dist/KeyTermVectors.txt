@@ -1,0 +1,4 @@
+Sarmiento	39	11	7	13	9
+Parker	24	52	43	10	4
+Beattie	185	22	95	101	17
+Corpus	248	185	145	124	30
